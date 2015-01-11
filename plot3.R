@@ -19,7 +19,7 @@ hpc$Sub_metering_3 <- as.numeric(hpc$Sub_metering_3)
 #png("plot3.png", width=480, height=480, res=120)
 
 with(hpc,plot(Sub_metering_1 ~ DateTime, type="l", 
- 	ylab="Global Active Power (kilowatts)",	xlab=""))
+ 	ylab="Energy sub metering",	xlab=""))
 with(hpc, lines(Sub_metering_2 ~ DateTime,col="red"))
 with(hpc, lines(Sub_metering_3 ~ DateTime,col="blue"))
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),

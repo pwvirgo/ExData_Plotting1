@@ -15,11 +15,12 @@ hpc$Global_active_power<-as.numeric(hpc$Global_active_power)
 
 #sending the plot directly to pgn results are diff from copying from quarts to pgn.
 
-png("plot2.png", width=480, height=480, res=120)
+#png("plot2.png", width=480, height=480, res=120)
 with(hpc,plot(Global_active_power ~ DateTime, type="l", 
  	ylab="Global Active Power (kilowatts)",	xlab=""))
 
-dev.off()
+dev.copy(png, "Plot2.png", height=480, width=480)
+dev.off(4)
 #dev.cur()  #dev.set(3) #dev.new(2)
 
 
